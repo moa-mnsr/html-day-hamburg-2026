@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>HTML Day 2026 Hamburg</title>
+		<link>https://example.com/</link>
+		<description>"HTML Day 2026 Hamburg</description>
+		<item>
+			<title>"HTML Day 2026 Hamburg</title>
+			<link>https://example.com/</link>
+			<description>
+				<![CDATA[
+		<h1>HTML Day 2026</h1>
+		<details>
+			<summary>When?</summary>
+			<p>8. August 2026</p>
+			<p>Time tbd</p>
+		</details>
+		<details>
+			<summary>Where?</summary>
+			<p>Moorburg</p>
+		</details>
+		<details>
+			<summary>What?</summary>
+			<p>Write and celebrate HTML together. And have a slice of pizza perhaps.</p>
+		</details>
+		<details>
+			<summary>What to bring?</summary>
+			<ul>
+				<li>Yourself.</li> 
+				<li>A computer or pen and paper.</li>
+			</ul>
+		</details>
+		<details>
+			<summary>Updates?</summary>
+			<p>Follow our <a href="feed.xml">RSS feed</a>.</p>
+		</details>
+	]]>
+			</description>
+			<pubDate>Sun, 28 Jun 2026 12:00:00 +0100</pubDate>
+		</item>
+	</channel>
+</rss>
