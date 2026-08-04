@@ -12,3 +12,15 @@ body{
 p{
 	padding-bottom: 1rem;
 }
+
+ul{
+	margin-left: 2.5rem;
+}
+
+details[open]{
+	padding-bottom: 1rem;
+}
+
+details > p{
+	padding-left: 1.4rem;
+}
