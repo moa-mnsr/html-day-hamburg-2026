@@ -1,0 +1,14 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	padding: 5px;
+	font-size: 24px;
+}
+
+
+p{
+	padding-bottom: 1rem;
+}
