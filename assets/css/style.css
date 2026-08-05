@@ -26,6 +26,10 @@ content{
 	/*transform: rotate(-4deg);*/
 }
 
+h1{
+	/*font-weight: lighter;*/
+}
+
 h2{
 	font-size: 1em;
 	/*font-weight: lighter;*/
@@ -42,11 +46,17 @@ img{
 	max-width: 500px;
 
 	margin-top: -1rem;
-
 }
 
 ul{
 	margin-left: 4em;
+}
+
+summary {
+	width: fit-content; 
+}
+summary:hover{
+	cursor: pointer;
 }
 
 details[open]{
@@ -60,4 +70,14 @@ details > :is(details, p, h2, img){
 code{
 	font-family: Menlo, monospace;
 	font-weight: lighter;
+}
+
+.emoji{
+	font-size: 1.2em;
+}
+
+@media (orientation: portrait){
+	img{
+		max-width: 88vw;
+	}
 }
