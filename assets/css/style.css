@@ -18,7 +18,7 @@ body{
 	background-image: linear-gradient(45deg, white 25%, transparent 25%, transparent 75%, white 75%), linear-gradient(45deg, white 25%, transparent 25%, transparent 75%, white 75%);
 	background-size: 300px 300px;
 	background-position: 0 0, 150px 150px;
-	display: flex;
+	/*display: flex;*/
 	/*justify-content: center;*/
 }
 
@@ -27,13 +27,22 @@ content{
 }
 
 h2{
-	font-size: 1.5em;
+	font-size: 1em;
 	/*font-weight: lighter;*/
 }
 
 
 p{
 	padding-bottom: 1rem;
+	max-width: 1000px;
+}
+
+img{
+	max-width: 95vw;
+	max-width: 500px;
+
+	margin-top: -1rem;
+
 }
 
 ul{
@@ -44,7 +53,7 @@ details[open]{
 	padding-bottom: 1rem;
 }
 
-details > p,details > details{
+details > :is(details, p, h2, img){
 	padding-left: 1em;
 }
 
