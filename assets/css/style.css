@@ -5,21 +5,30 @@
 }
 
 html{
-
 }
 
 body{
 	padding: 5px;
-	font-size: 32px;
+	font-size: 28px;
 	text-align: left;
 	line-height: 1;
 
 	background-color: #6ff203;
-opacity: 1;
-background-image: linear-gradient(45deg, white 25%, transparent 25%, transparent 75%, white 75%), linear-gradient(45deg, white 25%, transparent 25%, transparent 75%, white 75%);
-background-size: 300px 300px;
-background-position: 0 0, 150px 150px;
+	opacity: 1;
+	background-image: linear-gradient(45deg, white 25%, transparent 25%, transparent 75%, white 75%), linear-gradient(45deg, white 25%, transparent 25%, transparent 75%, white 75%);
+	background-size: 300px 300px;
+	background-position: 0 0, 150px 150px;
+	display: flex;
+	/*justify-content: center;*/
+}
 
+content{
+	/*transform: rotate(-4deg);*/
+}
+
+h2{
+	font-size: 1.5em;
+	/*font-weight: lighter;*/
 }
 
 
@@ -35,8 +44,8 @@ details[open]{
 	padding-bottom: 1rem;
 }
 
-details > p{
-	padding-left: 1.85rem;
+details > p,details > details{
+	padding-left: 1em;
 }
 
 code{
