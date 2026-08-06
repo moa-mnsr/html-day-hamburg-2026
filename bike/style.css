@@ -52,12 +52,12 @@ progress[value]::-webkit-progress-value::before, progress[value]::-moz-progress-
     font-size: 14px;
 }
 
-.progress-indicators > div:first-child {
+.progress-indicators > details:first-child {
     text-align: left;
     justify-self: start;
 }
 
-.progress-indicators > div:nth-child(2) {
+.progress-indicators > details:nth-child(2) {
     justify-self: center;
 }
 
