@@ -21,27 +21,30 @@
                 <center><label for="bike-progress">🚲 HTML day 2026 Hamburg communal bike ride status 🚲</label></center>
             </h1>
             <div class="space-m"></div>
-            <progress id="bike-progress" value="0" max="100">
-            </progress>
-            <div class="indicator">
-                <script> document.write(new Date().toLocaleTimeString())</script><br>
-                <div style="display: flex; gap: 8px;">
-                    <div style="transform: scale(-1, 1) translateY(-3px);">🚲</div>
-                    The ride has not yet started
+            <div class="prog">
+                <progress id="bike-progress" value="0" max="100">
+                </progress>
+                <div class="indicator">
+                    <script> document.write(new Date().toLocaleTimeString())</script><br>
+                    <div style="display: flex; gap: 8px;">
+                        <div style="transform: scale(-1, 1) translateY(-3px);">🚲</div>
+                        The ride has not yet started
+                    </div>
                 </div>
-            </div>
 
-            <div class="progress-indicators">
-                <div lang="de">Hammer Kirche<br>11h30</div>
-                <div lang="de">Brandshof<br>11h50</div>
-                <div lang="de">Deichtorhallen<br>12h00</div>
-                <div lang="de">Landungsbrücken<br>~12h20</div>
-                <details>
-                    <summary>
-                        <div lang="de">Moorburg<br>13h00</div>
-                    </summary>
-                    Moorburger Elbdeich 361, 21079 Hamburg
-                </details>
+                <div class="progress-indicators">
+                    <div lang="de">Hammer Kirche<br>11h30</div>
+                    <div lang="de">Brandshof<br>11h50</div>
+                    <div lang="de">Deichtorhallen<br>12h00</div>
+                    <div lang="de">Landungsbrücken<br>~12h20</div>
+                    <details>
+                        <summary>
+                            <div lang="de">Moorburg<br>13h00</div>
+                        </summary>
+                        Moorburger Elbdeich 361, 21079 Hamburg
+                    </details>
+                </div>
+
             </div>
 
             <div class="space-m"></div>
