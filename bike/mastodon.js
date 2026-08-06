@@ -84,17 +84,16 @@ function updateProgress(txt, timecode, progressElement, currentStop) {
         var start = txt.reIndexOf(/prog\d/);
         if(start >= 0) {
             //var value = txt[start].substr(1);
-            var value = txt[start].substr(3);
+            var value = txt[start].substr(4);
         }
         var startStop = txt.reIndexOf(/at\D/);
         if(startStop >= 0) {
             //var current = txt[startStop].substr(4);
-            var current = txt[startStop].substr();
+            var current = txt[startStop].substr(2);
             pos = current;
-            console.log(pos);
         }
-        if(typeof parseInt(value) === "number") {
-            document.getElementById(progressElement).value = parseInt(value) || 0;
+        if(typeof parseInt(value, 10) === "number") {
+            document.getElementById(progressElement).value = parseInt(value, 10);
         }
         if (current) {
             document.querySelector(currentStop).innerHTML = new Date(timecode).toLocaleTimeString() + '<br><div style="display: flex; gap: 8px;"><div style="transform: scale(-1, 1) translateY(-3px);">🚲</div>' + current.replace(/([A-Z])/g, ' $1').trim() + '</div>';
