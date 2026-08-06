@@ -42,12 +42,14 @@ progress[value]::-webkit-progress-value::before, progress[value]::-moz-progress-
 }
 
 .progress-indicators {
-    margin-top: -36px;
+    margin-top: -24px;
     display: grid; 
     grid-template-columns: 1fr 2fr 1fr 4fr 2fr;
     width: 100%;
     text-align: center;
     hyphens: auto;
+    font-family: monospace;
+    font-size: 14px;
 }
 
 .progress-indicators > div:first-child {
@@ -59,18 +61,20 @@ progress[value]::-webkit-progress-value::before, progress[value]::-moz-progress-
     justify-self: center;
 }
 
-.progress-indicators > div:last-child {
+.progress-indicators > details:last-child {
     text-align: right;
     justify-self: end;
 }
 .indicator {
     --left: 0;
     position: relative;
-    top: -46px;
+    top: -34px;
     left: var(--left);
     width: fit-content;
     z-index: 1;
     transition: 1s;
+    font-family: monospace;
+    font-size: 14px;
 }
 .space-m {
     padding-top: 24px;
@@ -78,6 +82,8 @@ progress[value]::-webkit-progress-value::before, progress[value]::-moz-progress-
 .time {
     display: flex;
     gap: 16px;
+    font-family: monospace;
+    font-size: 12px;
 }
 .step {
     display: block;
