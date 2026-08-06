@@ -89,7 +89,8 @@ progress[value]::-webkit-progress-value::before, progress[value]::-moz-progress-
 
 @keyframes fade { 
     from { 
-        opacity: 0.5; 
+        opacity: 0.3; 
+        filter: hue-rotate(60deg);
     } to {
         opacity: 1; 
     } 
