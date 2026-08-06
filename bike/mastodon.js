@@ -44,7 +44,7 @@ function getMastoStream(streamURL, filter = "", appendTo) {
         const items = data.querySelectorAll("item");
         let html = ``;
         for(var el of items) {
-            var img = decodeHtmlEntitiesWithDOM(stringToHTML(el.innerHTML)).lastElementChild;
+            var img = decodeHtmlEntitiesWithDOM(stringToHTML(el.innerHTML)).querySelector('media\\:content');
             var timecode = decodeHtmlEntitiesWithDOM(stringToHTML(el.innerHTML)).querySelector('pubdate').innerHTML;
             var txt = decodeHtmlEntitiesWithDOM(stringToHTML(el.innerHTML).querySelector('description').innerHTML);
             var hashtags = stringToHTML(txt).querySelectorAll('.hashtag');
@@ -53,7 +53,7 @@ function getMastoStream(streamURL, filter = "", appendTo) {
                 hashtagHtml.push(tag.innerHTML.replace("#", "").replace("<span>", "").replace("</span>", ""));
             });
             if (txt.includes(filter)){
-                const imgString =  isImage(img.getAttribute('url')) ? "<img src="+img.getAttribute('url')+"><br>" : "";
+                const imgString =  isImage(img.getAttribute('url')) ? "<img src="+img.getAttribute('url')+" alt="+'\"'+img.innerText.replace(/(\r\n|\n|\r)/g, "").trim()+'\"'+"><br>" : "";
                 html += `
 <div class = "step"> 
 </div>
@@ -81,7 +81,7 @@ ${txt}
 
 function updateProgress(txt, timecode, progressElement, currentStop) {
     if(!flag) {
-        var start = txt.reIndexOf(/%\d/);
+        var start = txt.reIndexOf(/prog\d/);
         if(start >= 0) {
             //var value = txt[start].substr(1);
             var value = txt[start].substr(3);
