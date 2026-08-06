@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Communal bike ride progress — HTML day 2026</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+              integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+              crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+                integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+                crossorigin=""></script>
+
+        <script src="map.js">
+        </script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <h1>
+                <center><label for="bike-progress">🚲 HTML day 2026 Hamburg communal bike ride status 🚲</label></center>
+            </h1>
+            <div class="space-m"></div>
+            <progress id="bike-progress" value="0" max="100">
+            </progress>
+            <div class="indicator">
+                <script> document.write(new Date().toLocaleTimeString())</script><br>
+                <div style="display: flex; gap: 8px;">
+                    <div style="transform: scale(-1, 1) translateY(-3px);">🚲</div>
+                    The ride has not yet started
+                </div>
+            </div>
+
+            <div class="progress-indicators">
+                <div lang="de">Hammer Kirche<br>11h30</div>
+                <div lang="de">Brandshof<br>11h50</div>
+                <div lang="de">Deichtorhallen<br>12h00</div>
+                <div lang="de">Landungsbrücken<br>~12h20</div>
+                <div lang="de">Moorburg<br>13h00</div>
+            </div>
+
+            <div class="space-m"></div>
+            <h2><span class="blinking">🔵</span> Latest updates <span class="blinking">🔵</span></h2>
+            <div id="bike-tour">
+                <article>
+                    No updates so far.
+                </article>
+            </div>
+
+            <div class="space-m"></div>
+            <h2>🗺️ Route 🗺️</h2>
+            <div id="map"></div>
+            <p>Please note: this map only shows approximate positions and is not intended for live tracking.</p>
+
+        </main>
+    </body>
+    <script src="mastodon.js"></script>
+</html>
+
+
