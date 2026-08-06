@@ -9,12 +9,13 @@
 			<link>https://html.wwwegetables.net/</link>
 			<description>
 				<![CDATA[
-		<h1>HTML<code>&lt;tag&gt;</code> <br>(Hamburg-)&#8203;Moorburg 2026</h1>
+
+	<h1>HTML<code>&lt;tag&gt;</code> <br>(Hamburg-)&#8203;Moorburg 2026</h1>
 	<details>
 		<summary>When?</summary>
 		<p>8. August 2026<br>
 			13:00 (CET+1)<br>
-			(<a href="/bike">communal bike ride at&nbsp;12:30<span class="emoji">🚲</span></a>)
+			(<a href="/bike">communal bike ride at&nbsp;11:30<span class="emoji">🚲</span></a>. Starting at various points in the city.)
 
 		</p>
 	</details>
@@ -28,8 +29,8 @@
 			<h2>By Bike</h2>
 			<p>It’s a lovely bike ride (30–45 minutes) from the city through the old Elbtunnel, harbour, crossing a couple of bridges and riding on the Deich. <br>
 
-                We will meet at <i>Landungsbrücken</i> for a <strong><a href="/bike">communal bike ride</a></strong> at 12:30 and cycle together to Moorburg.</p>
-
+                We will meet at <i>various points</i> and at <i>Landungsbrücken</i> at 12:30 and cycle together to Moorburg.</p>
+				<p>Check the<strong><a href="/bike">communal bike ride site</a></strong> for more info.</p>
 				<h2>Public transport </h2>
 				<p>The <a href="https://geofox.hvv.de/web/de/connections?execute=true&start=Altona&startCity=Hamburg&startType=STATION&destination=Moorburger%20Kreuzung&destinationCity=Hamburg&destinationType=STATION&date=08.08.2026&time=12:36&timeIsDeparture=1&desiredtype=fasttrain&extrafasttrain,longdistancebus:10000=&changeevent=4&walker=1&anyhandicap=0&tostartby=FOOTPATH&todestby=" target="blank"> Bus 250</a> goes from Bf. Altona and takes about 25 minutes to <i>Moorburger Kreuzung</i> which is about 5 minutes walking distance to the place.</p>	
 
@@ -77,9 +78,11 @@
 			<summary>Not in Hamburg?</summary>
 			<p>Find or organize your own event! <a href="https://html.energy/events.html" target="blank">https://html.energy/events.html</a>.</p>
 		</details>
+
+
 	]]>
 			</description>
-			<pubDate>Thu, 06 Aug 2026 16:00:00 +0100</pubDate>
+			<pubDate>Thu, 06 Aug 2026 16:55:00 +0100</pubDate>
 		</item>
 				<item>
 			<title>Communal bike ride progress — HTML day 2026</title>
