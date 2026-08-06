@@ -16,7 +16,7 @@ L.Map.addInitHook(function () {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    L.map("map").setView([53.525, 9.99], 12);
+    L.map("map").setView([53.525, 9.99], 11.5);
     var map = mapsPlaceholder.pop();
     getMastoStream('https://typo.social/@simonthiefes.rss', filter = "htmlday2026", '#bike-tour');
     setTimeout(function(){
