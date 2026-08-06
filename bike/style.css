@@ -116,3 +116,8 @@ progress[value]::-webkit-progress-value::before, progress[value]::-moz-progress-
 .blinking {
     animation: fade 2s infinite alternate;
 }
+
+.flip{
+	transform: scaleX(-1); 
+	width:fit-content;
+}
