@@ -1,6 +1,7 @@
 body {
     padding: 5px;
     font-size: 20px;
+    font-synthesis: none;
 }
 
 h1 {
