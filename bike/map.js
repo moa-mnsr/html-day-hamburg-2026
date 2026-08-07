@@ -55,16 +55,27 @@ document.addEventListener("DOMContentLoaded", function() {
             return L.circleMarker(latlng, geojsonMarkerOptions);
         }
     }).addTo(map);
-    if(window.pos != "NotStarted"){
+    var coordinateArray = geojsonFeature.getFeaturesByProperty('name', 'Coords')[0].geometry.coordinates;
+
+    if(window.pos[0] != "NotStarted" && null){
         var coord = geojsonFeature.getFeaturesByProperty('name', window.pos)[0].geometry.coordinates;
         var marker = L.circleMarker(coord.reverse(), updateMarkerOptions).addTo(map);
     }
+    if(window.pos[0] == null && window.pos[1] != -1){
+        var coord = coordinateArray[parseInt(coordinateArray.length/100*window.pos[1])].slice(0,2).reverse();;
+        var marker = L.circleMarker(coord, updateMarkerOptions).addTo(map);
+    }
     setTimeout(function(){
         try{
-            if(window.pos != "NotStarted"){
+            if(window.pos[0] != "NotStarted" && null){
                 var posi = window.pos;
                 var coord = geojsonFeature.getFeaturesByProperty('name', posi)[0].geometry.coordinates;
                 marker.setLatLng(coord.reverse());
+            }
+            if(window.pos[0] == null && window.pos[1] != -1){
+                var coord = coordinateArray[parseInt(coordinateArray.length/100*window.pos[1])].slice(0,2).reverse();
+                var marker = L.circleMarker(coord, updateMarkerOptions).addTo(map);
+                marker.setLatLng(coord);
             }
         } catch (e) {
             console.log(e);
@@ -84,7 +95,7 @@ var geojsonFeature =  {
             "type": "Feature",
             "properties": {
                 "creator": "BRouter-1.7.9",
-                "name": "Hamburg -> Harburg (21,7 km)",
+                "name": "Coords",
                 "track-length": "21659",
                 "filtered ascend": "18",
                 "plain-ascend": "1",

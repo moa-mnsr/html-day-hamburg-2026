@@ -36,7 +36,7 @@ function decodeHtmlEntitiesWithDOM(encodedString) {
 
 function getMastoStream(streamURL, filter = "", appendTo) {
     const RSS_URL = streamURL;
-    pos = "NotStarted";
+    pos = ["NotStarted", -1];
     fetch(RSS_URL)
         .then(response => response.text())
         .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
@@ -94,10 +94,15 @@ function updateProgress(txt, timecode, progressElement, currentStop) {
         }
         if(typeof parseInt(value, 10) === "number") {
             document.getElementById(progressElement).value = parseInt(value, 10);
+            pos[1] = parseInt(value, 10);
+            if (!current) {
+                pos[0] = null;
+            }
         }
         if (current) {
             document.querySelector(currentStop).innerHTML = new Date(timecode).toLocaleTimeString() + '<br><div style="display: flex; gap: 8px;"><div style="transform: scale(-1, 1) translateY(-3px);">🚲</div>' + current.replace(/([A-Z])/g, ' $1').trim() + '</div>';
             document.querySelector(currentStop).style.setProperty('--left', 'calc(' + value +'% - 72px)');
+            pos[0] = current;
         }
         flag = true;
     }
