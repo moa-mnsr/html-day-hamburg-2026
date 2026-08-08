@@ -57,7 +57,9 @@ function getMastoStream(streamURL, filter = "", appendTo) {
                 hashtagHtml.push(tag.innerHTML.replace("#", "").replace("<span>", "").replace("</span>", ""));
             });
             if (txt.includes(filter)){
-                const imgString =  isImage(img.getAttribute('url')) ? "<img src="+img.getAttribute('url')+" alt="+'\"'+img.innerText.replace(/(\r\n|\n|\r)/g, "").trim()+'\"'+"><br>" : "";
+                if(img){
+                    const imgString =  isImage(img.getAttribute('url')) ? "<img src="+img.getAttribute('url')+" alt="+'\"'+img.innerText.replace(/(\r\n|\n|\r)/g, "").trim()+'\"'+"><br>" : "";
+                }
                 html += `
 <div class = "step"> 
 </div>
