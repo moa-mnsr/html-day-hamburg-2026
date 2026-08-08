@@ -44,7 +44,11 @@ function getMastoStream(streamURL, filter = "", appendTo) {
         const items = data.querySelectorAll("item");
         let html = ``;
         for(var el of items) {
-            var img = decodeHtmlEntitiesWithDOM(stringToHTML(el.innerHTML)).querySelector('media\\:content');
+            try{
+                var img = decodeHtmlEntitiesWithDOM(stringToHTML(el.innerHTML)).querySelector('media\\:content');
+            } catch(e) {
+                console.log(e);
+            }
             var timecode = decodeHtmlEntitiesWithDOM(stringToHTML(el.innerHTML)).querySelector('pubdate').innerHTML;
             var txt = decodeHtmlEntitiesWithDOM(stringToHTML(el.innerHTML).querySelector('description').innerHTML);
             var hashtags = stringToHTML(txt).querySelectorAll('.hashtag');
