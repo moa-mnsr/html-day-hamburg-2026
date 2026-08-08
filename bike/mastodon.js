@@ -96,7 +96,13 @@ function updateProgress(txt, timecode, progressElement, currentStop) {
             document.getElementById(progressElement).value = parseInt(value, 10);
             pos[1] = parseInt(value, 10);
             if (!current) {
-                pos[0] = null;
+                if(pos[1] = parseInt(value, 10) <= 0){
+                    pos[0] = null;
+                } else {
+                    pos[0] = null;
+                    document.querySelector(currentStop).innerHTML = new Date(timecode).toLocaleTimeString() + '<br><div style="display: flex; gap: 8px;"><div style="transform: scale(-1, 1) translateY(-3px);">🚲</div>On the way</div>';
+                    document.querySelector(currentStop).style.setProperty('--left', 'calc(' + value +'% - 72px)');
+                }
             }
         }
         if (current) {
