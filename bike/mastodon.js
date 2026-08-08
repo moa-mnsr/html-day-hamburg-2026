@@ -56,6 +56,7 @@ function getMastoStream(streamURL, filter = "", appendTo) {
             hashtags.forEach( tag => {
                 hashtagHtml.push(tag.innerHTML.replace("#", "").replace("<span>", "").replace("</span>", ""));
             });
+            const imgString = "";
             if (txt.includes(filter)){
                 if(img != null){
                     const imgString =  isImage(img.getAttribute('url')) ? "<img src="+img.getAttribute('url')+" alt="+'\"'+img.innerText.replace(/(\r\n|\n|\r)/g, "").trim()+'\"'+"><br>" : "";
