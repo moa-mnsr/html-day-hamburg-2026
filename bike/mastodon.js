@@ -60,7 +60,7 @@ function getMastoStream(streamURL, filter = "", appendTo) {
                 if(img != null){
                     const imgString =  isImage(img.getAttribute('url')) ? "<img src="+img.getAttribute('url')+" alt="+'\"'+img.innerText.replace(/(\r\n|\n|\r)/g, "").trim()+'\"'+"><br>" : "";
                 } else {
-                    imgString = "";
+                    const imgString = "";
                 }
                 html += `
 <div class = "step"> 
